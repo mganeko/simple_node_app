@@ -4,7 +4,7 @@
   "description": "simple example for Node.js Web App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"warn: no test specified\" && exit 0",
     "start": "node index.js"
   },
   "keywords": [
