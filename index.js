@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express()
-const os = require('os');
-const port = 8080;
+//const os = require('os');
+
+//const port = 8080;
+const port = process.env.PORT;
+
 const helloMessage = 'Simple App Running';
 app.get('/', function (req, res) {
   res.send('Hello node.js');
