@@ -3,7 +3,7 @@ const app = express()
 //const os = require('os');
 
 //const port = 8080;
-const port = process.env.PORT;
+const port = process.env.PORT ?? 8080;
 
 const helloMessage = 'Simple App Running';
 app.get('/', function (req, res) {
