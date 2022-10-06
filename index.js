@@ -5,12 +5,13 @@ const app = express()
 //const port = 8080;
 const port = process.env.PORT ?? 8080;
 
-const helloMessage = 'Simple App Running';
+const defaultMessage = 'Simple App Running';
 app.get('/', function (req, res) {
   res.send('Hello node.js');
 });
 app.get('/app/', function (req, res) {
-  res.send('Hello, ' + helloMessage);
+  const message = req.query.name ?? defaultMessage;
+  res.send('Hello, ' + message);
 });
 app.listen(port, function () {
   console.log('Hello app listening on port ' + port);
